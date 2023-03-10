@@ -6,10 +6,10 @@ import knex from 'knex'
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1', // same as local host
-        user: 'postgres',
-        password: 'password',
-        database: 'smart-brain'
+        host: 'dpg-cg44vqvdvk4st7163sd0-a.oregon-postgres.render.com', //127.0.0.1: same as local host
+        user: 'admin',
+        password: 'pa5kra52lI1DwpIrzhMDeEuE4notRUWW',
+        database: 'smart_brain_snow'
     }
 });
 
@@ -144,7 +144,6 @@ app.post('/api-data', (req, res) => {
     res.send({ pat: REACT_APP_PAT, userID: REACT_APP_USER_ID });
 })
 app.listen(3000, () => {
-    // console.log('app is running on port 3000');
 })
 
 /*
