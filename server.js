@@ -6,10 +6,13 @@ import knex from 'knex'
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'dpg-cg44vqvdvk4st7163sd0-a.oregon-postgres.render.com', //127.0.0.1: same as local host
+        host: 'dpg-cg44vqvdvk4st7163sd0-a.oregon-postgres.render.com',
         user: 'admin',
         password: 'pa5kra52lI1DwpIrzhMDeEuE4notRUWW',
-        database: 'smart_brain_snow'
+        database: 'smart_brain_snow',
+        ssl: {
+            rejectUnauthorized: false
+        }
     }
 });
 
